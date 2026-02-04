@@ -50,6 +50,11 @@ namespace OscJack
             return "";
         }
 
+        public bool GetElementAsBool(int index)
+        {
+            return _typeTags[index] == 'T';
+        }
+
         #endregion
 
         #region Internal method
@@ -98,7 +103,7 @@ namespace OscJack
 
         #region Private members
 
-        Byte[] _sharedBuffer;
+        public Byte[] _sharedBuffer;
 
         List<char> _typeTags = new List<char>(8);
         List<int> _offsets = new List<int>(8);
